@@ -1,9 +1,17 @@
 import React from "react";
 
-function Navbar() {
+const Footer = () => {
   return (
-    <div className="fixed top-0 left-0 z-50 w-full px-20 py-8 flex justify-between items-center ">
-      <div className="logo">
+    <div  data-scroll data-scroll-section data-scroll-speed=".8" className="flex gap-5 w-full h-screen p-20">
+      <div className="w-1/2 h-fullss flex flex-col justify-between ">
+        <div className="heading">
+          <h1 className="text-[6vw] font-semibold uppercase leading-none -mb-6">
+            Eye-
+          </h1>
+          <h1 className="text-[6vw] font-semibold uppercase leading-none -mb-6">
+            Opening
+          </h1>
+        </div>
         <svg
           width="72"
           height="30"
@@ -33,20 +41,16 @@ function Navbar() {
           ></path>
         </svg>
       </div>
-
-      <div className="links flex gap-10">
-        {["Services", "Our works", "About", "Contacts"].map((item, index) => (
-          <a
-            key={index}
-            href={`#${item.toLowerCase().replace(" ", "-")}`}
-            className="text-lg capitalize font-bold text-zinc-900"
-          >
-            {item}
-          </a>
-        ))}
+      <div className="text-[8vw] font-semibold uppercase leading-none">
+        <h1 className="text-[6vw] "> Presentation</h1>
+        <div className="dets pt-40">
+          <a className="block text-xl font-semibold"  href="">Facebook</a>
+          <a className="block text-xl font-semibold" href="">Instagram</a>
+          <a className="block text-xl font-semibold" href="">Github</a>
+        </div>
       </div>
     </div>
   );
-}
+};
 
-export default Navbar;
+export default Footer;
